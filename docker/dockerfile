@@ -9,6 +9,13 @@ COPY ./ais_bench-0.0.2-py3-none-any.whl /app/
 
 RUN pip3 install ./aclruntime-0.0.2-cp311-cp311-linux_aarch64.whl
 RUN pip3 install ./ais_bench-0.0.2-py3-none-any.whl
+# fasterapi uvicorn
+RUN pip install --no-cache-dir fastapi uvicorn
+# opencv-python-headless
+RUN pip install --no-cache-dir opencv-python-headless==4.10.0.84
+RUN pip install --no-cache-dir python-multipart
+# pyinstaller 
+RUN pip install --no-cache-dir pyinstaller
 
 
 CMD ["tail", "-f", "/dev/null"]
