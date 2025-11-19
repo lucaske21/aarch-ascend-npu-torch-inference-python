@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY ./aclruntime-0.0.2-cp311-cp311-linux_aarch64.whl /app/
 COPY ./ais_bench-0.0.2-py3-none-any.whl /app/
-
+COPY ./apinpu /app/apinpu
 
 RUN pip3 install ./aclruntime-0.0.2-cp311-cp311-linux_aarch64.whl
 RUN pip3 install ./ais_bench-0.0.2-py3-none-any.whl
